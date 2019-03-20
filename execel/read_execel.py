@@ -18,9 +18,10 @@ def read_excel(file_name):
     worksheet = workbook.sheets()[0]
     nrows = worksheet.nrows
     ncols = worksheet.ncols
+    # print worksheet.cell_value(1,0)
     strs = worksheet.row_values(0)
 
-    for i in range(nrows - 2):
+    for i in range(1, nrows - 1):
         dict = {}
         geopoint = {}
         for j in range(ncols):
@@ -33,9 +34,11 @@ def read_excel(file_name):
             elif worksheet.cell_value(0, j) == 'lon' or worksheet.cell_value(0, j) == 'lat':
                 continue
             else:
-                object = worksheet.cell_value(i + 1, j)
+                object = worksheet.cell_value(i, j)
             dict[str] = object
         dict['geopoint'] = geopoint
+        print len(dict.keys())
+        break
         # es = get_es_client()
         # es.index('land_transaction_cn_test', 'transaction', dict, id)
 

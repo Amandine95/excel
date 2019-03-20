@@ -6,27 +6,27 @@ import json
 # 根据地址获取经纬度坐标（From BaiduMap Api）
 # 传入地址数据格式必须为str,不能是unicode
 def getGeoPoints(address):
-    try:
-        address = address.encode('utf-8') if type(address) != 'str' else address
-        url = 'http://api.map.baidu.com/geocoder/v2/'
-        output = 'json'
-        ak = 'jTkxA1kZ0tGqTpPGYv0DVT701vOQRowI'
-        add = quote(address)  # 信息格式化
-        uri = url + '?' + 'address=' + add + '&output=' + output + '&ak=' + ak
-        req = urlopen(uri)
-        res = req.read()
-        temp = json.loads(res)
-        if temp['status'] == 0:
-            lat = temp['result']['location']['lat']
-            lng = temp['result']['location']['lng']
-        else:
-            print '坐标获取失败'
-            lat = float(0)
-            lng = float(0)
-        return lat, lng
-    except Exception, e:
-        print 'ex',e
-        return float(0), float(0)
+    while True:
+        try:
+            address = address.encode('utf-8') if type(address) != 'str' else address
+            url = 'http://api.map.baidu.com/geocoder/v2/'
+            output = 'json'
+            ak = 'jTkxA1kZ0tGqTpPGYv0DVT701vOQRowI'
+            add = quote(address)  # 信息格式化
+            uri = url + '?' + 'address=' + add + '&output=' + output + '&ak=' + ak
+            req = urlopen(uri)
+            res = req.read()
+            temp = json.loads(res)
+            if temp['status'] == 0:
+                lat = temp['result']['location']['lat']
+                lng = temp['result']['location']['lng']
+                return lat, lng
+            else:
+                continue
+
+        except Exception, e:
+            print 'ex', e
+            continue
 
 
 if __name__ == '__main__':
