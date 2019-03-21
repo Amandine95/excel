@@ -34,6 +34,9 @@ def getGeoPoints(address):
     lon = float(0)
     return lat, lon
 
+def getGeoState():
+    pass
+
 
 if __name__ == '__main__':
     address = u'密云县密云镇密云新城0102街区中部'
