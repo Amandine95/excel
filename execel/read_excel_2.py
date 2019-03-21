@@ -19,31 +19,28 @@ def excelToCsv(filename):
     id_no = titles.index('id')
     province_no = titles.index('province')
     city_no = titles.index('city')
-    # dis_no = titles.index('district')
     location_no = titles.index('location')
-    data_title = ['id', 'province', 'city', 'location', 'baidu_geopoint', 'tiditu_geopoint', 'district']
-    # with open('data_csv.csv', 'w',) as cvs_obj:
-    #     writer = csv.writer(cvs_obj)
-    #     writer.writerows(data_title)
+    data_list = []
     for i in range(2, 5):
-        data = []
-        data.append(sheet.cell_value(i, id_no))
-        data.append(sheet.cell_value(i, province_no))
+        data = {}
+        data['id'] = sheet.cell_value(i, id_no)
+        data['province'] = sheet.cell_value(i, province_no)
         city = sheet.cell_value(i, city_no)
         location = sheet.cell_value(i, location_no)
-        data.append(city)
-        data.append(location)
+        data['city'] = city
+        data['location'] = location
         address = city + location
         bd_lat, bd_lon = getGeoPoints(address)
-        tdt_lat, tdt_lon = tiandituPoint(address)
+        data['tdt_lat'], data['tdt_lon'] = tiandituPoint(address)
         district = getAddressInfo(bd_lat, bd_lon)
-        data.append((bd_lat, bd_lon))
-        data.append((tdt_lat, tdt_lon))
-        data.append(district)
-        print data[-1].encode('utf-8')
-        break
-
-        # writer.writerows(data)
+        data['bd_lat'], data['bd_lon'] = bd_lat, bd_lon
+        data['district'] = district
+        data_list.append(data)
+    with open('data_csv.csv', 'wb+', ) as csv_obj:
+        headers = data_list[0].keys()
+        writer = csv.DictWriter(csv_obj, fieldnames=headers)
+        writer.writeheader()
+        writer.writerows(data_list)
 
 
 if __name__ == '__main__':
