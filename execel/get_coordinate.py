@@ -6,7 +6,8 @@ import json
 # 根据地址获取经纬度坐标（From BaiduMap Api）
 # 传入地址数据格式必须为str,不能是unicode
 def getGeoPoints(address):
-    while True:
+    tries = 5
+    while tries > 0:
         try:
             address = address.encode('utf-8') if type(address) != 'str' else address
             url = 'http://api.map.baidu.com/geocoder/v2/'
@@ -22,11 +23,16 @@ def getGeoPoints(address):
                 lng = temp['result']['location']['lng']
                 return lat, lng
             else:
+                tries -= 1
                 continue
 
         except Exception, e:
             print 'ex', e
+            tries -= 1
             continue
+    lat = float(0)
+    lon = float(0)
+    return lat, lon
 
 
 if __name__ == '__main__':

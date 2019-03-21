@@ -6,8 +6,9 @@
 import xlrd
 from get_coordinate import getGeoPoints
 import sys
-import json
+from datetime import datetime
 from store_to_elasticsearch import get_es_client
+from xlrd import xldate_as_datetime
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -18,29 +19,39 @@ def read_excel(file_name):
     worksheet = workbook.sheets()[0]
     nrows = worksheet.nrows
     ncols = worksheet.ncols
-    # print worksheet.cell_value(1,0)
     strs = worksheet.row_values(0)
-
-    for i in range(1, nrows - 1):
+    for i in range(1, nrows - 7):
         dict = {}
         geopoint = {}
         for j in range(ncols):
             str = strs[j]
-
+            object = None
             if worksheet.cell_value(0, j) == 'location':
                 state_index = j
                 object = location = worksheet.cell_value(i, state_index)
                 geopoint['lat'], geopoint['lon'] = getGeoPoints(location)
             elif worksheet.cell_value(0, j) == 'lon' or worksheet.cell_value(0, j) == 'lat':
                 continue
+            elif worksheet.cell(i, j).ctype == 3:
+                cell = worksheet.cell_value(i, j)
+
+                date = xldate_as_datetime(cell, 0)
+
+                date = datetime.strftime(date, '%Y%m%d')
+                object = date
+            elif worksheet.cell_value(0, j) == 'land_name':
+                land_index = j
+                object = worksheet.cell_value(i, j)
             else:
                 object = worksheet.cell_value(i, j)
             dict[str] = object
         dict['geopoint'] = geopoint
-        print len(dict.keys())
-        break
-        # es = get_es_client()
-        # es.index('land_transaction_cn_test', 'transaction', dict, id)
+        state_no = worksheet.cell_value(i, 0)
+        code = state_no + worksheet.cell_value(i, land_index)
+        id_ = abs(hash(code))
+        print '存入%d' % i
+        es = get_es_client()
+        es.index('land_transaction_cn_test', 'transaction', dict, id_)
 
 
 if __name__ == '__main__':
