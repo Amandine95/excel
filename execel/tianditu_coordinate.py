@@ -17,7 +17,6 @@ def tiandituPoint(address):
             ds_dict["keyWord"] = address
             data = json.dumps(ds_dict)
             uri = url + '?' + 'ds=' + data + '&tk=' + tk
-            print uri
             resp = urlopen(uri)
             resp_data = json.loads(resp.read())
             if resp_data['status'] == '0':

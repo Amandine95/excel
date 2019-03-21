@@ -34,8 +34,35 @@ def getGeoPoints(address):
     lon = float(0)
     return lat, lon
 
-def getGeoState():
-    pass
+
+# 根据坐标获取地址
+def getAddressInfo(lat, lon):
+    tries = 5
+    while tries > 0:
+        try:
+            url = 'http://api.map.baidu.com/geocoder/v2/'
+            output = 'json'
+            ak = 'jTkxA1kZ0tGqTpPGYv0DVT701vOQRowI'
+            location = str(lat) + ',' + str(lon)
+            lastest_admin = "1"  # 是否访问最新版行政区划分数据 1是0否
+            uri = url + '?location=' + location + "&output=" + output + "&pois=1&ak=" + ak + "&lastest_admin" + lastest_admin
+
+            req = urlopen(uri)
+            res = req.read()
+            result = json.loads(res)
+            if result['status'] == 0:
+                address_info = result['result']
+                return address_info['addressComponent']['district']
+            else:
+                tries -= 1
+                continue
+
+        except Exception, e:
+            print 'x', e
+            tries -= 1
+            continue
+    address_info = None
+    return address_info
 
 
 if __name__ == '__main__':
