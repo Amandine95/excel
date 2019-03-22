@@ -1,6 +1,10 @@
 # -*- coding:utf-8 -*-
 from urllib import quote, urlopen
 import json
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 
 # 根据地址获取经纬度坐标（From BaiduMap Api）
@@ -9,6 +13,7 @@ def getGeoPoints(address):
     tries = 5
     while tries > 0:
         try:
+            address = address.replace(u'、', u'') if u'、' in address else address
             address = address.encode('utf-8') if type(address) != 'str' else address
             url = 'http://api.map.baidu.com/geocoder/v2/'
             output = 'json'
@@ -61,11 +66,13 @@ def getAddressInfo(lat, lon):
             print 'x', e
             tries -= 1
             continue
-    address_info = None
+    address_info = 0
     return address_info
 
 
 if __name__ == '__main__':
-    address = u'密云县密云镇密云新城0102街区中部'
+    address = u'北京市门头沟区门头沟新城MC10-033 MC10-035-1 MC10-035-2 MC10-036 MC10-055 MC10-056地块'
     lat, lon = getGeoPoints(address)
     print lat, lon
+
+    # print getAddressInfo(0.0, 0.0)
