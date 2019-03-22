@@ -37,6 +37,7 @@ def getGeoPoints(address):
             continue
     lat = float(0)
     lon = float(0)
+
     return lat, lon
 
 
@@ -56,8 +57,9 @@ def getAddressInfo(lat, lon):
             res = req.read()
             result = json.loads(res)
             if result['status'] == 0:
-                address_info = result['result']
-                return address_info['addressComponent']['district']
+                city = result['result']['addressComponent']['city']
+                dstrict = result['result']['addressComponent']['district']
+                return city, dstrict
             else:
                 tries -= 1
                 continue
@@ -66,13 +68,12 @@ def getAddressInfo(lat, lon):
             print 'x', e
             tries -= 1
             continue
-    address_info = 0
-    return address_info
+
+    city = None
+    district = None
+    return city, district
 
 
 if __name__ == '__main__':
-    address = u'北京市门头沟区门头沟新城MC10-033 MC10-035-1 MC10-035-2 MC10-036 MC10-055 MC10-056地块'
-    lat, lon = getGeoPoints(address)
-    print lat, lon
-
-    # print getAddressInfo(0.0, 0.0)
+    address = u'北京市房山区窦店镇亚新路17号'
+    print getGeoPoints(address)

@@ -55,8 +55,10 @@ def tiandituAddress(lat, lon):
             resp = urlopen(uri)
             resp_data = json.loads(resp.read())
             if resp_data['status'] == '0':
-                address = resp_data['result']['addressComponent']['city'].replace(u'北京市', u'')
-                return address
+                address = resp_data['result']['addressComponent']['city']
+                city = address
+                district = address
+                return city,district
             else:
                 tries -= 1
                 continue
@@ -64,10 +66,11 @@ def tiandituAddress(lat, lon):
             print 'ex2', e
             tries -= 1
             continue
-    address = '000反查无结果'
-    return address
+    city = None
+    district = None
+    return city,district
 
 
 if __name__ == '__main__':
-    print tiandituPoint(u'北京市顺义区牛栏山镇SY00-0017-6001等地块B1商业用地、R2二类居住用地、F1住宅混合公建用地')
-    print tiandituAddress(40.033588, 116.622912)
+    print tiandituPoint(u'陕西省西安市未央区张家堡街道')
+    print tiandituAddress(34.3283, 108.940592)
