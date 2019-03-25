@@ -16,15 +16,27 @@
     <SUITE FILE_PATH="coverage/python_execel$read_excel_2.coverage" NAME="read_excel_2 Coverage Results" MODIFIED="1553246923447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
     <SUITE FILE_PATH="coverage/python_execel$tianditu_coordinate.coverage" NAME="tianditu_coordinate Coverage Results" MODIFIED="1553479894231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
     <SUITE FILE_PATH="coverage/python_execel$read_execel__1_.coverage" NAME="read_execel (1) Coverage Results" MODIFIED="1553160986896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
-    <SUITE FILE_PATH="coverage/python_execel$get_city_id.coverage" NAME="get_city_id Coverage Results" MODIFIED="1553509308622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$get_city_id.coverage" NAME="get_city_id Coverage Results" MODIFIED="1553511339716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/execel/get_city_id.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+            <state relative-caret-position="1638">
+              <caret line="91" column="36" lean-forward="true" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+              <folding>
+                <element signature="e#24#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/execel/read_excel_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="45" column="38" lean-forward="true" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -56,8 +68,8 @@
         <option value="$PROJECT_DIR$/execel/parse_es_data.py" />
         <option value="$PROJECT_DIR$/execel/get_coordinate.py" />
         <option value="$PROJECT_DIR$/execel/tianditu_coordinate.py" />
-        <option value="$PROJECT_DIR$/execel/get_city_id.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/execel/get_city_id.py" />
       </list>
     </option>
   </component>
@@ -80,6 +92,11 @@
             <path>
               <item name="python_execel" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_execel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_execel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_execel" type="462c0819:PsiDirectoryNode" />
+              <item name="execel" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -243,12 +260,12 @@
       <workItem from="1553130163603" duration="83000" />
       <workItem from="1553130296700" duration="26315000" />
       <workItem from="1553217053736" duration="29821000" />
-      <workItem from="1553475912491" duration="26537000" />
+      <workItem from="1553475912491" duration="28160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125683000" />
+    <option name="totallyTimeSpent" value="127306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -286,16 +303,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/execel/北京市_update_data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/北京市_wrong_data.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/execel/济宁市_update_data.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1124" />
@@ -338,13 +345,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/execel/fail_data_北京市.csv">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/read_excel_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="45" column="38" lean-forward="true" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../py27/Lib/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -503,15 +503,6 @@
     <entry file="file://$PROJECT_DIR$/execel/success_data_漳州市.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/execel/city_without_data.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_保定市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_保定市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -519,10 +510,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_北京市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_北京市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/read_excel_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="45" column="38" lean-forward="true" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/city_without_data.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_保定市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_保定市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/execel/get_city_id.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+        <state relative-caret-position="1638">
+          <caret line="91" column="36" lean-forward="true" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+          <folding>
+            <element signature="e#24#72#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -7,6 +7,7 @@ import csv
 from get_coordinate import getGeoPoints, getAddressInfo
 from tianditu_coordinate import tiandituPoint
 
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -90,23 +91,30 @@ def parse_es_data(index_, type_):
                 data_list = results['hits']['hits']
                 print len(data_list)
                 for data in data_list:
+                    # dic = {}
                     id = data['_id']
                     electr_supervise_no = data['_source']['electr_supervise_no']
                     province = province_code[prefix[0:2]]
                     city = data['_source']['city']
                     location = data['_source']['location']
                     data_source_url = data['_source']['data_source_url']
+                    # dic['electr_supervise_no'] = electr_supervise_no
+                    # dic['id'] = id
+                    # dic['province'] = province
+                    # dic['location'] = location
                     if city == city_dict[key]:
                         right_city = city_dict[key]
                         flag = 1
-                        data["_source"]["flag"] = 1
+                        # dic['flag'] = flag
                         address = city + location
                         bd_lat, bd_lon = getGeoPoints(address)
-                        data["_source"]["geopoint"]["lat"] = bd_lat
-                        data["_source"]["geopoint"]["lon"] = bd_lon
+                        # dic["geopoint"]["lat"] = bd_lat
+                        # dic["geopoint"]["lon"] = bd_lon
                         tdt_lat, tdt_lon = tiandituPoint(address)
+                        # dic['tdt_geopoint']['lat'] = tdt_lat
+                        # dic['tdt_geopoint']['lon'] = tdt_lon
                         district = getAddressInfo(bd_lat, bd_lon)[1]
-                        data["_source"]["district"] = district
+                        # dic["district"] = district
                         if (bd_lat == 0 and bd_lon == 0) or len(electr_supervise_no) <= 9:
                             flag = 0
                     else:
@@ -114,17 +122,18 @@ def parse_es_data(index_, type_):
                         right_city = city_dict[key]
 
                     if flag == 1:
+                        # es.update("land_transaction_1_cn", "transaction",id,dic)
                         write_line = '\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",%f,%f,%f,%f,%d' % (
                             electr_supervise_no, id, province, city, district, location, bd_lat, bd_lon, tdt_lat,
                             tdt_lon,
                             flag)
-                        f1.write(write_line + '\n')
+                        f1.write(write_line + "\n")
                     else:
                         write_line = '\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",%f,%f,%f,%f,%d' % (
                             electr_supervise_no, id, province, city, right_city, data_source_url, location, bd_lat,
                             bd_lon, tdt_lat,
                             tdt_lon, flag)
-                        f2.write(write_line + '\n')
+                        f2.write(write_line + "\n")
             else:
                 print u'%s没有数据' % city_dict[key]
                 f3.write('%s没有数据,city_id=%s' % (city_dict[key], prefix))
