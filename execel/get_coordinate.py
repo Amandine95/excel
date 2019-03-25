@@ -32,7 +32,7 @@ def getGeoPoints(address):
                 continue
 
         except Exception, e:
-            print 'ex', e
+            print 'get_coordinate-1', e
             tries -= 1
             continue
     lat = float(0)
@@ -65,7 +65,7 @@ def getAddressInfo(lat, lon):
                 continue
 
         except Exception, e:
-            print 'x', e
+            print 'get_coordinate2-', e
             tries -= 1
             continue
 
@@ -75,5 +75,7 @@ def getAddressInfo(lat, lon):
 
 
 if __name__ == '__main__':
-    address = u'北京市房山区窦店镇亚新路17号'
+    address = u'保定市易定线南侧石庄小学东侧'
     print getGeoPoints(address)
+    dis = getAddressInfo(38.879988,115.471464)[1]
+    print dis

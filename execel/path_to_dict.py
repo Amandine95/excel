@@ -82,18 +82,16 @@ def get_data(dict, str):
 
 def put_data(dict, str, object):
     if '.' in str:
-        path_list = str.split('.')
+        p_list = str.split('.')
     else:
-        path_list = [str]
-    if len(path_list) == 1:
-        if path_list[0] in dict.keys() and isinstance(dict[path_list[0]],type({})):
-            dict[path_list[0]] = object
-            return dict
-    path_list.pop(0)
-    str = '.'.join(path_list)
-    dict = dict
-
-
+        p_list = list(str)
+    if len(p_list) == 1:
+        if p_list[0] in dict.keys():
+            print 'dict not empty'
+        dict[p_list[0]] = object
+        return dict
+    if len(p_list) != 1:
+        pass
 
 # ----------测试数据--------------#
 

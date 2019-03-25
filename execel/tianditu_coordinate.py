@@ -10,6 +10,7 @@ sys.setdefaultencoding('utf-8')
 
 
 def tiandituPoint(address):
+    """天地图获取坐标"""
     tries = 5
     while tries > 0:
         try:
@@ -31,7 +32,7 @@ def tiandituPoint(address):
                 tries -= 1
                 continue
         except Exception as e:
-            print 'ex1', e
+            print 'tianditu-1', e
             tries -= 1
             continue
     lat = float(0)
@@ -41,6 +42,7 @@ def tiandituPoint(address):
 
 # 请求：http://api.tianditu.gov.cn/geocoder?postStr={'lon':116.37304,'lat':39.92594,'ver':1}&type=geocode&tk=您的密钥
 def tiandituAddress(lat, lon):
+    """天地图获取地址"""
     tries = 5
     while tries > 0:
         try:
@@ -58,19 +60,19 @@ def tiandituAddress(lat, lon):
                 address = resp_data['result']['addressComponent']['city']
                 city = address
                 district = address
-                return city,district
+                return city
             else:
                 tries -= 1
                 continue
         except Exception as e:
-            print 'ex2', e
+            print 'tianditu-2', e
             tries -= 1
             continue
     city = None
     district = None
-    return city,district
+    return city, district
 
 
 if __name__ == '__main__':
-    print tiandituPoint(u'陕西省西安市未央区张家堡街道')
-    print tiandituAddress(34.3283, 108.940592)
+    print tiandituPoint(u'黄山路西段南侧，地块西侧为李家庄村民委员会土地，地块东侧为捎门村村民委员会土地，地块南侧为李家庄村民委员会和捎门村村民委员会土地')
+    print tiandituAddress(39.914460, 116.367800)
