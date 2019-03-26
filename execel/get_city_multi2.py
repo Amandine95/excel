@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-
+from multiprocessing import process
 from store_to_elasticsearch import get_es_client
 import logging
 import sys
@@ -70,15 +70,15 @@ def get_city2():
     return dict
 
 
-def parse_es_data(index_, type_):
+def parse_es_data(index_, type_,i):
     """按城市匹配修正es的数据"""
     city_dict = get_city2()
     print 'cities-', len(city_dict.keys())
     f3 = open(u'city_without_data.csv', 'w+')
-    success_citys = [u'3608', u'6542', u'3203', u'4107', u'3301', u'4416', u'4109', u'2111', u'1306']
+    success_citys = [u'3608', u'6542', u'3203', u'4107', u'3301', u'4416', u'4109', u'2111', u'1306',u'1101',u'1309',u'2203']
     for key in city_dict.keys():
         prefix = key[0:4]
-        if prefix in success_citys:
+        if prefix not in success_citys and prefix[0] == i:
             f1 = open(u'success_data/success_data_%s.csv' % city_dict[key], 'w+')
             headers1 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'bd_lat', 'bd_lon',
                         'tdt_lat', 'tdt_lon', 'flag']
@@ -144,5 +144,5 @@ def parse_es_data(index_, type_):
 
 
 if __name__ == '__main__':
-    parse_es_data("land_transaction_1_cn", "transaction")
+    parse_es_data("land_transaction_1_cn", "transaction",'2')
     # print get_city2()

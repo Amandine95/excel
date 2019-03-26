@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
-
 from store_to_elasticsearch import get_es_client
 import logging
 import sys
 import csv
 from get_coordinate import getGeoPoints, getAddressInfo
 from tianditu_coordinate import tiandituPoint
+from multiprocessing import Process
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -70,15 +70,16 @@ def get_city2():
     return dict
 
 
-def parse_es_data(index_, type_):
+def parse_es_data(i):
     """按城市匹配修正es的数据"""
     city_dict = get_city2()
     print 'cities-', len(city_dict.keys())
     f3 = open(u'city_without_data.csv', 'w+')
-    success_citys = [u'3608', u'6542', u'3203', u'4107', u'3301', u'4416', u'4109', u'2111', u'1306']
+    success_citys = [u'3608', u'6542', u'3203', u'4107', u'3301', u'4416', u'4109', u'2111', u'1306', u'1101', u'1309',
+                     u'2203']
     for key in city_dict.keys():
         prefix = key[0:4]
-        if prefix in success_citys:
+        if prefix not in success_citys and prefix[0] == i:
             f1 = open(u'success_data/success_data_%s.csv' % city_dict[key], 'w+')
             headers1 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'bd_lat', 'bd_lon',
                         'tdt_lat', 'tdt_lon', 'flag']
@@ -91,7 +92,7 @@ def parse_es_data(index_, type_):
             writer.writeheader()
             print u'%s-' % city_dict[key], prefix
             sql = '''{"query":{"bool":{"must":[{"prefix":{"electr_supervise_no":"%s"}}],"must_not":[],"should":[]}},"from":0,"size":10000,"sort":[],"aggs":{}}''' % prefix
-            results = es.search(index_, type_, sql)
+            results = es.search("land_transaction_1_cn", "transaction", sql)
             if results['hits']['total'] > 0:
                 data_list = results['hits']['hits']
                 print 'total-%d' % len(data_list)
@@ -144,5 +145,15 @@ def parse_es_data(index_, type_):
 
 
 if __name__ == '__main__':
-    parse_es_data("land_transaction_1_cn", "transaction")
-    # print get_city2()
+    p1 = Process(target=parse_es_data, args=('3',))
+    p2 = Process(target=parse_es_data, args=('4',))
+    p3 = Process(target=parse_es_data, args=('5',))
+    p4 = Process(target=parse_es_data, args=('6',))
+    p5 = Process(target=parse_es_data, args=('7',))
+    p6 = Process(target=parse_es_data, args=('8',))
+    p1.start()
+    p2.start()
+    p3.start()
+    p4.start()
+    p5.start()
+    p6.start()
