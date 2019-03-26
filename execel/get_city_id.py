@@ -75,7 +75,7 @@ def parse_es_data(index_, type_):
     city_dict = get_city2()
     print 'cities-', len(city_dict.keys())
     f3 = open(u'city_without_data.csv', 'w+')
-    success_citys = [u'3608', u'6542', u'3203', u'4107', u'3301', u'4416', u'4109', u'2111', u'1306']
+    success_citys = [u'3608', u'4107', u'4109', u'2111', u'1306']
     for key in city_dict.keys():
         prefix = key[0:4]
         if prefix in success_citys:
@@ -137,7 +137,7 @@ def parse_es_data(index_, type_):
 
             f1.close()
             f2.close()
-            success_citys.append(prefix)
+            success_citys.remove(prefix)
             print 'success-%s' % success_citys[-1]
 
     f3.close()
