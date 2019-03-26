@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/execel/get_city_id.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="139" column="40" lean-forward="true" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
+            <state relative-caret-position="2178">
+              <caret line="136" selection-start-line="136" selection-end-line="136" />
               <folding>
                 <element signature="e#24#72#0" expanded="true" />
               </folding>
@@ -38,11 +38,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/execel/get_city_multi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+            <state relative-caret-position="-526">
+              <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
               <folding>
                 <element signature="e#23#27#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/execel/signal">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -51,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/execel/get_city_multi2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1576">
-              <caret line="146" column="18" lean-forward="true" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="56" />
+              <caret line="146" column="18" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="56" />
               <folding>
                 <element signature="e#23#58#0" expanded="true" />
               </folding>
@@ -63,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/execel/get_city_multi3.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="874">
-              <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+              <caret line="142" selection-start-line="142" selection-end-line="142" />
               <folding>
                 <element signature="e#23#71#0" expanded="true" />
               </folding>
@@ -103,7 +112,6 @@
         <option value="$PROJECT_DIR$/execel/path_to_dict.py" />
         <option value="$PROJECT_DIR$/execel/parse_es_data.py" />
         <option value="$PROJECT_DIR$/execel/get_coordinate.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/execel/read_execel.py" />
         <option value="$PROJECT_DIR$/execel/read_excel_2.py" />
         <option value="$PROJECT_DIR$/execel/tianditu_coordinate.py" />
@@ -112,6 +120,8 @@
         <option value="$PROJECT_DIR$/execel/get_city_multi.py" />
         <option value="$PROJECT_DIR$/execel/get_city_multi2.py" />
         <option value="$PROJECT_DIR$/execel/get_city_multi3.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/execel/signal" />
       </list>
     </option>
   </component>
@@ -139,12 +149,6 @@
               <item name="python_execel" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_execel" type="462c0819:PsiDirectoryNode" />
               <item name="execel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_execel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_execel" type="462c0819:PsiDirectoryNode" />
-              <item name="execel" type="462c0819:PsiDirectoryNode" />
-              <item name="success_data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -308,12 +312,12 @@
       <workItem from="1553130163603" duration="83000" />
       <workItem from="1553130296700" duration="26315000" />
       <workItem from="1553217053736" duration="29821000" />
-      <workItem from="1553475912491" duration="55383000" />
+      <workItem from="1553475912491" duration="56215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154529000" />
+    <option name="totallyTimeSpent" value="155361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -351,32 +355,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/execel/success_data_新乡市.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/fail_data_石嘴山市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_漳州市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_濮阳市.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28682" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_盘锦市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/execel/read_excel_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-234">
@@ -457,9 +435,6 @@
     <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_保定市.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_盘锦市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_濮阳市.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -519,15 +494,12 @@
     <entry file="file://$PROJECT_DIR$/execel/get_city_multi2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1576">
-          <caret line="146" column="18" lean-forward="true" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="56" />
+          <caret line="146" column="18" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="56" />
           <folding>
             <element signature="e#23#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/city_without_data.csv">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_河源市.csv">
       <provider selected="true" editor-type-id="text-editor">
@@ -550,9 +522,43 @@
     <entry file="file://$PROJECT_DIR$/execel/get_city_multi3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="874">
-          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
           <folding>
             <element signature="e#23#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_保山市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_杭州市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19686" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_盘锦市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_海南藏族自治州.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_大庆市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/get_city_id.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2178">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+          <folding>
+            <element signature="e#24#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -562,31 +568,31 @@
         <state relative-caret-position="-42290" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_保山市.csv">
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_运城市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1898" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/city_without_data.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_陇南市.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/execel/get_city_multi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+        <state relative-caret-position="-526">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
           <folding>
             <element signature="e#23#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_杭州市.csv">
+    <entry file="file://$PROJECT_DIR$/execel/signal">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19686" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/get_city_id.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="139" column="40" lean-forward="true" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
-          <folding>
-            <element signature="e#24#72#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="54">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
         </state>
       </provider>
     </entry>
