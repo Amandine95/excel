@@ -7,7 +7,6 @@ import csv
 from get_coordinate import getGeoPoints, getAddressInfo
 from tianditu_coordinate import tiandituPoint
 
-
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -59,9 +58,15 @@ def get_city2():
                 city_id = data['city_id']
                 city = data['city']
                 dict[city_id] = city
+
+
+
     except Exception as e:
         logger.debug(e)
-
+    dict.pop('110000')
+    dict.pop('310000')
+    dict.pop('120000')
+    dict.pop('500000')
     return dict
 
 
@@ -70,59 +75,50 @@ def parse_es_data(index_, type_):
     city_dict = get_city2()
     print 'cities-', len(city_dict.keys())
     f3 = open(u'city_without_data.csv', 'w+')
+    success_citys = [u'1101', u'3608', u'6542', u'3203', u'4107', u'3301', u'4416', u'4109', u'2111', u'1306']
     for key in city_dict.keys():
-        f1 = open(u'success_data/success_data_%s.csv' % city_dict[key], 'w+')
-        headers1 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'bd_lat', 'bd_lon',
-                    'tdt_lat', 'tdt_lon', 'flag']
-        writer = csv.DictWriter(f1, fieldnames=headers1)
-        writer.writeheader()
-        f2 = open(u'fail_data/fail_data_%s.csv' % city_dict[key], 'w+')
-        headers2 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'data_source_url', 'flag']
-        writer = csv.DictWriter(f2, fieldnames=headers2)
-        writer.writeheader()
         prefix = key[0:4]
-        if city_dict[key] == u'北京市':
-            prefix = "1101"
-        print u'%s-' % city_dict[key], prefix
-        sql = '''{"query":{"bool":{"must":[{"prefix":{"electr_supervise_no":"%s"}}],"must_not":[],"should":[]}},"from":0,"size":10000,"sort":[],"aggs":{}}''' % prefix
-        try:
+        if prefix in success_citys:
+            f1 = open(u'success_data/success_data_%s.csv' % city_dict[key], 'w+')
+            headers1 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'bd_lat', 'bd_lon',
+                        'tdt_lat', 'tdt_lon', 'flag']
+            writer = csv.DictWriter(f1, fieldnames=headers1)
+            writer.writeheader()
+            f2 = open(u'fail_data/fail_data_%s.csv' % city_dict[key], 'w+')
+            headers2 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'data_source_url',
+                        'flag']
+            writer = csv.DictWriter(f2, fieldnames=headers2)
+            writer.writeheader()
+            print u'%s-' % city_dict[key], prefix
+            sql = '''{"query":{"bool":{"must":[{"prefix":{"electr_supervise_no":"%s"}}],"must_not":[],"should":[]}},"from":0,"size":10000,"sort":[],"aggs":{}}''' % prefix
             results = es.search(index_, type_, sql)
             if results['hits']['total'] > 0:
                 data_list = results['hits']['hits']
-                print len(data_list)
+                print 'total-%d' % len(data_list)
                 for data in data_list:
-                    # dic = {}
                     id = data['_id']
                     electr_supervise_no = data['_source']['electr_supervise_no']
                     province = province_code[prefix[0:2]]
                     city = data['_source']['city']
                     location = data['_source']['location']
                     data_source_url = data['_source']['data_source_url']
-                    # dic['electr_supervise_no'] = electr_supervise_no
-                    # dic['id'] = id
-                    # dic['province'] = province
-                    # dic['location'] = location
                     if city == city_dict[key]:
                         right_city = city_dict[key]
                         flag = 1
-                        # dic['flag'] = flag
-                        address = city + location
-                        bd_lat, bd_lon = getGeoPoints(address)
-                        # dic["geopoint"]["lat"] = bd_lat
-                        # dic["geopoint"]["lon"] = bd_lon
-                        tdt_lat, tdt_lon = tiandituPoint(address)
-                        # dic['tdt_geopoint']['lat'] = tdt_lat
-                        # dic['tdt_geopoint']['lon'] = tdt_lon
-                        district = getAddressInfo(bd_lat, bd_lon)[1]
-                        # dic["district"] = district
+                        try:
+                            address = city + location
+                            bd_lat, bd_lon = getGeoPoints(address)
+                            tdt_lat, tdt_lon = tiandituPoint(address)
+                            district = getAddressInfo(bd_lat, bd_lon)[1]
+                        except Exception as e:
+                            logger.debug(e)
+
                         if (bd_lat == 0 and bd_lon == 0) or len(electr_supervise_no) <= 9:
                             flag = 0
                     else:
                         flag = 0
                         right_city = city_dict[key]
-
                     if flag == 1:
-                        # es.update("land_transaction_1_cn", "transaction",id,dic)
                         write_line = '\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",%f,%f,%f,%f,%d' % (
                             electr_supervise_no, id, province, city, district, location, bd_lat, bd_lon, tdt_lat,
                             tdt_lon,
@@ -136,14 +132,14 @@ def parse_es_data(index_, type_):
                         f2.write(write_line + "\n")
             else:
                 print u'%s没有数据' % city_dict[key]
-                f3.write('%s没有数据,city_id=%s' % (city_dict[key], prefix))
+                f3.write('\"%s没有数据\",\"city_id=%s\"' % (city_dict[key], prefix) + "\n")
                 continue
-        except Exception as e:
-            logger.debug(e)
 
-        finally:
             f1.close()
             f2.close()
+            success_citys.append(prefix)
+            print 'success-%s' % success_citys[-1]
+
     f3.close()
 
 

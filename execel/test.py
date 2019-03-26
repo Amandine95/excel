@@ -1,5 +1,5 @@
-dict = {}
+dic = {'1':'a','2':'b'}
 
-dict['a']['b'] = 'c'
+del dic['1','2']
 
-print dict
+print dic

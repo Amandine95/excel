@@ -11,6 +11,7 @@ sys.setdefaultencoding('utf-8')
 
 
 def excelToCsv(filename):
+    """读取excel写入csv"""
     book = xlrd.open_workbook(filename)
     sheet = book.sheets()[0]
     rows = sheet.nrows

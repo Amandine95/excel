@@ -60,7 +60,7 @@ def tiandituAddress(lat, lon):
                 address = resp_data['result']['addressComponent']['city']
                 city = address
                 district = address
-                return city
+                return city, district
             else:
                 tries -= 1
                 continue
@@ -74,5 +74,5 @@ def tiandituAddress(lat, lon):
 
 
 if __name__ == '__main__':
-    print tiandituPoint(u'黄山路西段南侧，地块西侧为李家庄村民委员会土地，地块东侧为捎门村村民委员会土地，地块南侧为李家庄村民委员会和捎门村村民委员会土地')
-    print tiandituAddress(39.914460, 116.367800)
+    print tiandituPoint(u'')
+    # print tiandituAddress(39.914460, 116.367800)

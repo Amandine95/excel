@@ -17,6 +17,7 @@ sys.setdefaultencoding('utf-8')
 
 
 def read_excel(file_name):
+    """读取excel写入es"""
     workbook = xlrd.open_workbook(file_name)
     worksheet = workbook.sheets()[0]
     nrows = worksheet.nrows
