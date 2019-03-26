@@ -2,3 +2,5 @@
 /execel/fail_data/
 /execel/success_data/
 /execel/*.xls
+/execel/success_data_copy/
+/execel/fail_data_copy/
