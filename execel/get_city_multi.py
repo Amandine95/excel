@@ -76,7 +76,8 @@ def parse_es_data(i):
     print 'cities-', len(city_dict.keys())
     f3 = open(u'city_without_data.csv', 'w+')
     success_citys = [u'3608', u'6542', u'3203', u'4107', u'3301', u'4416', u'4109', u'2111', u'1306', u'1101', u'1309',
-                     u'2203',u'6229',u'6501',u'5305',u'6530',u'5134',u'5113',u'6110',u'6202',u'6542',u'5331',u'5401',u'6325',u'5114',u'6402',u'6101',u'5334',u'5109',u'6209',u'6401',u'6212']
+                     u'2203', u'6229', u'6501', u'5305', u'6530', u'5134', u'5113', u'6110', u'6202', u'6542', u'5331',
+                     u'5401', u'6325', u'5114', u'6402', u'6101', u'5334', u'5109', u'6209', u'6401', u'6212']
     for key in city_dict.keys():
         prefix = key[0:4]
         if prefix not in success_citys and prefix[0] == i:
@@ -149,4 +150,3 @@ if __name__ == '__main__':
     p2 = Process(target=parse_es_data, args=('6',))
     p1.start()
     p2.start()
-

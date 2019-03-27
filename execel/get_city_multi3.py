@@ -22,29 +22,6 @@ province_code = {"11": u"北京市", "12": u"天津市", "13": u"河北省", "14
                  "82": u"澳门特别行政区"}
 
 
-def get_city():
-    """获取城市及ID"""
-
-    dict = {}
-    for pre in [4603]:
-        sql = '''
-                {"query":{"bool":{"must":[{"prefix":{"city_id":"%d"}}],"must_not":[],"should":[]}},"from":0,"size":50,"sort":[],"aggs":{}}
-                ''' % pre
-
-        try:
-            results = es.search("region_metadata_2017_cn", "meta", sql)
-            if results['hits']['total'] > 0:
-                data = results['hits']['hits'][0]['_source']
-                city_id = data['city_id']
-                city = data['city']
-                dict[city_id] = city
-
-        except Exception as e:
-            logger.debug(e)
-
-    return dict
-
-
 def get_city2():
     """获取城市及id"""
     dict = {}
@@ -74,18 +51,22 @@ def parse_es_data(i):
     """按城市匹配修正es的数据"""
     city_dict = get_city2()
     print 'cities-', len(city_dict.keys())
-    f3 = open(u'city_without_data.csv', 'w+')
-    success_citys = [u'3608', u'6542', u'3203', u'4107', u'3301', u'4416', u'4109', u'2111', u'1306', u'1101', u'1309',
-                     u'2203']
+
+    success_citys = [u'4107', u'4416', u'4109', u'1306', u'1101', u'1309', u'4112', u'1509', u'1503', u'4115', u'1522',
+                     u'1411', u'1507', u'1501', u'1302', u'1402', u'1508', u'1310', u'1307', u'1409', u'1308', u'1407',
+                     u'1405', u'1406', u'4513', u'4302', u'4416', u'4403', u'4418', u'4331', u'1301', u'4412', u'4409',
+                     u'4210', u'4208', u'1311', u'4304', u'1504', u'1408', u'1505', u'1305', u'1304', u'1506', u'1525',
+                     u'1404', u'1403', u'4402', u'4451', u'4505', u'4202', u'4111', u'4406', u'1410', u'1502', u'1401',
+                     u'4207', u'1303', u'4509', u'1529']
     for key in city_dict.keys():
         prefix = key[0:4]
         if prefix not in success_citys and prefix[0] == i:
-            f1 = open(u'success_data/success_data_%s.csv' % city_dict[key], 'w+')
+            f1 = open(u'success_data_14/success_data_%s.csv' % city_dict[key], 'w+')
             headers1 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'bd_lat', 'bd_lon',
                         'tdt_lat', 'tdt_lon', 'flag']
             writer = csv.DictWriter(f1, fieldnames=headers1)
             writer.writeheader()
-            f2 = open(u'fail_data/fail_data_%s.csv' % city_dict[key], 'w+')
+            f2 = open(u'fail_data_14/fail_data_%s.csv' % city_dict[key], 'w+')
             headers2 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'data_source_url',
                         'flag']
             writer = csv.DictWriter(f2, fieldnames=headers2)
@@ -133,7 +114,7 @@ def parse_es_data(i):
                         f2.write(write_line + "\n")
             else:
                 print u'%s没有数据' % city_dict[key]
-                f3.write('\"%s没有数据\",\"city_id=%s\"' % (city_dict[key], prefix) + "\n")
+                # f.write('\"%s没有数据\",\"city_id=%s\"' % (city_dict[key], prefix) + "\n")
                 continue
 
             f1.close()
@@ -141,19 +122,11 @@ def parse_es_data(i):
             success_citys.append(prefix)
             print 'success-%s' % success_citys[-1]
 
-    f3.close()
-
 
 if __name__ == '__main__':
-    p1 = Process(target=parse_es_data, args=('3',))
+    # f = open(u'city_without_data_14.csv', 'a+')
+    p1 = Process(target=parse_es_data, args=('1',))
     p2 = Process(target=parse_es_data, args=('4',))
-    p3 = Process(target=parse_es_data, args=('5',))
-    p4 = Process(target=parse_es_data, args=('6',))
-    p5 = Process(target=parse_es_data, args=('7',))
-    p6 = Process(target=parse_es_data, args=('8',))
     p1.start()
     p2.start()
-    p3.start()
-    p4.start()
-    p5.start()
-    p6.start()
+    # f.close()
