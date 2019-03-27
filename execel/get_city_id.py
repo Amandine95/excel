@@ -6,6 +6,7 @@ import sys
 import csv
 from get_coordinate import getGeoPoints, getAddressInfo
 from tianditu_coordinate import tiandituPoint
+from multiprocessing import Process
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -70,28 +71,28 @@ def get_city2():
     return dict
 
 
-def parse_es_data(index_, type_):
+def parse_es_data(f, i):
     """按城市匹配修正es的数据"""
     city_dict = get_city2()
     print 'cities-', len(city_dict.keys())
-    f3 = open(u'city_without_data.csv', 'w+')
-    success_citys = [u'3608', u'4107', u'4109', u'2111', u'1306']
+    # f = open(u'city_without_data.csv', 'a+')
+    success_citys = [u'3608', u'2111',u'2309',u'2307',u'3401',u'3608',u'3304',u'2203',u'2306',u'2224',u'3203',u'2104',u'3301',u'2207',u'2101',u'2204',u'2110',u'2107',u'2303']
     for key in city_dict.keys():
         prefix = key[0:4]
-        if prefix in success_citys:
-            f1 = open(u'success_data/success_data_%s.csv' % city_dict[key], 'w+')
+        if prefix not in success_citys and prefix[0] == i:
+            f1 = open(u'success_data_23/success_data_%s.csv' % city_dict[key], 'w+')
             headers1 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'bd_lat', 'bd_lon',
                         'tdt_lat', 'tdt_lon', 'flag']
             writer = csv.DictWriter(f1, fieldnames=headers1)
             writer.writeheader()
-            f2 = open(u'fail_data/fail_data_%s.csv' % city_dict[key], 'w+')
+            f2 = open(u'fail_data_23/fail_data_%s.csv' % city_dict[key], 'w+')
             headers2 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'data_source_url',
                         'flag']
             writer = csv.DictWriter(f2, fieldnames=headers2)
             writer.writeheader()
             print u'%s-' % city_dict[key], prefix
             sql = '''{"query":{"bool":{"must":[{"prefix":{"electr_supervise_no":"%s"}}],"must_not":[],"should":[]}},"from":0,"size":10000,"sort":[],"aggs":{}}''' % prefix
-            results = es.search(index_, type_, sql)
+            results = es.search("land_transaction_1_cn", "transaction", sql)
             if results['hits']['total'] > 0:
                 data_list = results['hits']['hits']
                 print 'total-%d' % len(data_list)
@@ -132,17 +133,23 @@ def parse_es_data(index_, type_):
                         f2.write(write_line + "\n")
             else:
                 print u'%s没有数据' % city_dict[key]
-                f3.write('\"%s没有数据\",\"city_id=%s\"' % (city_dict[key], prefix) + "\n")
+                f.write('\"%s没有数据\",\"city_id=%s\"' % (city_dict[key], prefix) + "\n")
                 continue
 
             f1.close()
             f2.close()
-            success_citys.remove(prefix)
+            success_citys.append(prefix)
             print 'success-%s' % success_citys[-1]
 
-    f3.close()
+    # f.close()
 
 
 if __name__ == '__main__':
-    parse_es_data("land_transaction_1_cn", "transaction")
+    # parse_es_data("land_transaction_1_cn", "transaction")
     # print get_city2()
+    f = open(u'city_without_data.csv', 'a+')
+    p1 = Process(target=parse_es_data, args=(f, '2',))
+    p2 = Process(target=parse_es_data, args=(f, '3',))
+    p1.start()
+    p2.start()
+    f.close()

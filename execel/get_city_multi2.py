@@ -144,8 +144,6 @@ def parse_es_data(i):
 
 
 if __name__ == '__main__':
-    # parse_es_data("land_transaction_1_cn", "transaction",'2')
-    # print get_city2()
     p1 = Process(target=parse_es_data,args=('1',))
     p2 = Process(target=parse_es_data,args=('2',))
     p1.start()

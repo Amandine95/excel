@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
-from multiprocessing import process
 from store_to_elasticsearch import get_es_client
 import logging
 import sys
 import csv
 from get_coordinate import getGeoPoints, getAddressInfo
 from tianditu_coordinate import tiandituPoint
+from multiprocessing import Process
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -70,28 +70,29 @@ def get_city2():
     return dict
 
 
-def parse_es_data(index_, type_,i):
+def parse_es_data(i):
     """按城市匹配修正es的数据"""
     city_dict = get_city2()
     print 'cities-', len(city_dict.keys())
     f3 = open(u'city_without_data.csv', 'w+')
-    success_citys = [u'3608', u'6542', u'3203', u'4107', u'3301', u'4416', u'4109', u'2111', u'1306',u'1101',u'1309',u'2203']
+    success_citys = [u'3608', u'6542', u'3203', u'4107', u'3301', u'4416', u'4109', u'2111', u'1306', u'1101', u'1309',
+                     u'2203',u'6229',u'6501',u'5305',u'6530',u'5134',u'5113',u'6110',u'6202',u'6542',u'5331',u'5401',u'6325',u'5114',u'6402',u'6101',u'5334',u'5109',u'6209',u'6401',u'6212']
     for key in city_dict.keys():
         prefix = key[0:4]
         if prefix not in success_citys and prefix[0] == i:
-            f1 = open(u'success_data/success_data_%s.csv' % city_dict[key], 'w+')
+            f1 = open(u'success_data_56/success_data_%s.csv' % city_dict[key], 'w+')
             headers1 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'bd_lat', 'bd_lon',
                         'tdt_lat', 'tdt_lon', 'flag']
             writer = csv.DictWriter(f1, fieldnames=headers1)
             writer.writeheader()
-            f2 = open(u'fail_data/fail_data_%s.csv' % city_dict[key], 'w+')
+            f2 = open(u'fail_data_56/fail_data_%s.csv' % city_dict[key], 'w+')
             headers2 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'data_source_url',
                         'flag']
             writer = csv.DictWriter(f2, fieldnames=headers2)
             writer.writeheader()
             print u'%s-' % city_dict[key], prefix
             sql = '''{"query":{"bool":{"must":[{"prefix":{"electr_supervise_no":"%s"}}],"must_not":[],"should":[]}},"from":0,"size":10000,"sort":[],"aggs":{}}''' % prefix
-            results = es.search(index_, type_, sql)
+            results = es.search("land_transaction_1_cn", "transaction", sql)
             if results['hits']['total'] > 0:
                 data_list = results['hits']['hits']
                 print 'total-%d' % len(data_list)
@@ -144,5 +145,8 @@ def parse_es_data(index_, type_,i):
 
 
 if __name__ == '__main__':
-    parse_es_data("land_transaction_1_cn", "transaction",'1')
-    # print get_city2()
+    p1 = Process(target=parse_es_data, args=('5',))
+    p2 = Process(target=parse_es_data, args=('6',))
+    p1.start()
+    p2.start()
+
