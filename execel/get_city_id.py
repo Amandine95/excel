@@ -6,12 +6,14 @@ import sys
 import csv
 from get_coordinate import getGeoPoints, getAddressInfo
 from tianditu_coordinate import tiandituPoint
-from multiprocessing import Process
+# from multiprocessing import Process
+from test import cut_log
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
 logger = logging.getLogger(__name__)
+
 
 es = get_es_client()
 
@@ -71,25 +73,23 @@ def get_city2():
     return dict
 
 
-def parse_es_data(f, i):
+def parse_es_data(success_citys, i):
     """按城市匹配修正es的数据"""
+    bd_lat, bd_lon = float(0), float(0)
+    tdt_lat, tdt_lon = float(0), float(0)
+    district = None
     city_dict = get_city2()
     print 'cities-', len(city_dict.keys())
     # f = open(u'city_without_data.csv', 'a+')
-    success_citys = [u'3608', u'2111', u'2309', u'2307', u'3401', u'3608', u'3304', u'2203', u'2306', u'2224', u'3203',
-                     u'2104', u'3301', u'2207', u'2101', u'2204', u'2110', u'2107', u'2303', u'2202', u'2327', u'2102',
-                     u'3605', u'3711', u'3602', u'2113', u'2105', u'3506', u'3706', u'2208', u'2312', u'3205', u'2108',
-                     u'2114', u'3211', u'2304', u'3410', u'2312', u'2311', u'3717', u'2206', u'3705', u'2112', u'3417',
-                     u'3311', u'3402', u'2201', u'2109', u'2310', u'3501', u'3405', u'2106', u'3609']
     for key in city_dict.keys():
         prefix = key[0:4]
         if prefix not in success_citys and prefix[0] == i:
-            f1 = open(u'success_data_23/success_data_%s_%s.csv' % (city_dict[key], prefix), 'w+')
+            f1 = open(u'success_data_2/success_data_%s_%s.csv' % (city_dict[key], prefix), 'w+')
             headers1 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'bd_lat', 'bd_lon',
                         'tdt_lat', 'tdt_lon', 'flag']
             writer = csv.DictWriter(f1, fieldnames=headers1)
             writer.writeheader()
-            f2 = open(u'fail_data_23/fail_data_%s.csv' % city_dict[key], 'w+')
+            f2 = open(u'fail_data_2/fail_data_%s.csv' % city_dict[key], 'w+')
             headers2 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'data_source_url',
                         'flag']
             writer = csv.DictWriter(f2, fieldnames=headers2)
@@ -137,7 +137,7 @@ def parse_es_data(f, i):
                         f2.write(write_line + "\n")
             else:
                 print u'%s没有数据' % city_dict[key]
-                f.write('\"%s没有数据\",\"city_id=%s\"' % (city_dict[key], prefix) + "\n")
+                # f.write('\"%s没有数据\",\"city_id=%s\"' % (city_dict[key], prefix) + "\n")
                 continue
 
             f1.close()
@@ -151,9 +151,20 @@ def parse_es_data(f, i):
 if __name__ == '__main__':
     # parse_es_data("land_transaction_1_cn", "transaction")
     # print get_city2()
-    f = open(u'city_without_data_23.csv', 'a+')
-    p1 = Process(target=parse_es_data, args=(f, '2',))
-    p2 = Process(target=parse_es_data, args=(f, '3',))
-    p1.start()
-    p2.start()
-    f.close()
+    cities = [u'2111', u'2309', u'2307', u'2203', u'2306', u'2224',
+              u'2104', u'2207', u'2101', u'2204', u'2110', u'2107', u'2303', u'2202', u'2327', u'2102',
+              u'2113', u'2105', u'2208', u'2312', u'2108',
+              u'2114', u'3211', u'2304', u'2312', u'2311', u'2206', u'2112',
+              u'2201', u'2109', u'2310', u'2106', u'2305', u'2301', u'2310', u'2206', u'2205', u'2112', u'2201',
+              u'2109', u'2311', u'2302']
+    file_name = u'23_wrong.txt'
+    cities += cut_log(file_name)
+    # f = open(u'city_without_data_23.csv', 'a+')
+    print len(cities)
+    # p1 = Process(target=parse_es_data, args=(cities, '2',))
+    # p2 = Process(target=parse_es_data, args=(cities, '3',))
+    # p1.start()
+    # p2.start()
+    # f.close()
+    si = '2'
+    parse_es_data(cities, si)

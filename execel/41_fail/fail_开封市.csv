@@ -1,0 +1,3 @@
+electr_supervise_no,id,province,city,right_city,location,data_source_url,bd_lat,bd_lon,tdt_lat,tdt_lonflag
+"4102002011B00405","c6df1015-73f1-48ec-a79e-d28fa29d1b10","河南省","开封市","开封市","东至规划用地边界线，南至园区一号路道路红线，西至园区规划二号路道路红线，北至规划用地边界线。","http://www.landchina.com/default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=c6df1015-73f1-48ec-a79e-d28fa29d1b10",0.000000,0.000000,34.785848,114.334056,0
+"4102002011B00410","2b4e61e1-6d00-4472-8c2a-264ee58afa65","河南省","开封市","开封市","东至金明大道道路红线，南至南侧规划用地边界，西至西侧规划用地边界，北至园区规划三号路道路红线。","http://www.landchina.com/default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=2b4e61e1-6d00-4472-8c2a-264ee58afa65",0.000000,0.000000,34.733000,114.299592,0

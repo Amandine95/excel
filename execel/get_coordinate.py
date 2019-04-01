@@ -75,7 +75,7 @@ def getAddressInfo(lat, lon):
 
 
 if __name__ == '__main__':
-    address = u'保定市易定线南侧石庄小学东侧'
+    address = u'康乐县莲花山电站'
     print getGeoPoints(address)
-    dis = getAddressInfo(38.879988,115.471464)[1]
+    dis = getAddressInfo(31.079770,114.747352)[1]
     print dis

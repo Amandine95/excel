@@ -9,61 +9,100 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/python_execel$get_coordinate.coverage" NAME="get_coordinate Coverage Results" MODIFIED="1553506018619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$get_coordinate.coverage" NAME="get_coordinate Coverage Results" MODIFIED="1554113316109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
     <SUITE FILE_PATH="coverage/python_execel$read_execel.coverage" NAME="read_execel Coverage Results" MODIFIED="1552989234667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_execel$path_to_dict.coverage" NAME="path_to_dict Coverage Results" MODIFIED="1553150438067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
-    <SUITE FILE_PATH="coverage/python_execel$test.coverage" NAME="test Coverage Results" MODIFIED="1553568742869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
-    <SUITE FILE_PATH="coverage/python_execel$read_excel_2.coverage" NAME="read_excel_2 Coverage Results" MODIFIED="1553246923447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
-    <SUITE FILE_PATH="coverage/python_execel$tianditu_coordinate.coverage" NAME="tianditu_coordinate Coverage Results" MODIFIED="1553572397933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$test.coverage" NAME="test Coverage Results" MODIFIED="1554101333325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
     <SUITE FILE_PATH="coverage/python_execel$get_city_multi2.coverage" NAME="get_city_multi2 Coverage Results" MODIFIED="1553595467795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
     <SUITE FILE_PATH="coverage/python_execel$read_execel__1_.coverage" NAME="read_execel (1) Coverage Results" MODIFIED="1553160986896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
-    <SUITE FILE_PATH="coverage/python_execel$get_city_id.coverage" NAME="get_city_id Coverage Results" MODIFIED="1553682527892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
-    <SUITE FILE_PATH="coverage/python_execel$get_city_multi.coverage" NAME="get_city_multi Coverage Results" MODIFIED="1553651452503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
-    <SUITE FILE_PATH="coverage/python_execel$get_city_multi3.coverage" NAME="get_city_multi3 Coverage Results" MODIFIED="1553682514858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$parse_csv.coverage" NAME="parse_csv Coverage Results" MODIFIED="1554109793096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$parse_csv2.coverage" NAME="parse_csv2 Coverage Results" MODIFIED="1554111738598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$get_city_multi3.coverage" NAME="get_city_multi3 Coverage Results" MODIFIED="1553755097011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$parse_csv1__1_.coverage" NAME="parse_csv1 (1) Coverage Results" MODIFIED="1554109816112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$path_to_dict.coverage" NAME="path_to_dict Coverage Results" MODIFIED="1553150438067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$read_excel_2.coverage" NAME="read_excel_2 Coverage Results" MODIFIED="1553246923447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$tianditu_coordinate.coverage" NAME="tianditu_coordinate Coverage Results" MODIFIED="1554113174055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$parse_csv1.coverage" NAME="parse_csv1 Coverage Results" MODIFIED="1554107185003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_execel$get_city_id.coverage" NAME="get_city_id Coverage Results" MODIFIED="1553842690088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+    <SUITE FILE_PATH="coverage/python_execel$get_city_multi.coverage" NAME="get_city_multi Coverage Results" MODIFIED="1553751724769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/execel" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/execel/parse_csv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
+              <folding>
+                <element signature="e#24#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/execel/get_city_id.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
-              <folding>
-                <element signature="e#24#72#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/execel/get_city_multi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1396">
-              <caret line="144" column="14" selection-start-line="144" selection-start-column="14" selection-end-line="144" selection-end-column="14" />
-              <folding>
-                <element signature="e#23#71#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/execel/get_city_multi3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
-              <folding>
-                <element signature="e#23#71#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/execel/signal.txt">
+        <entry file="file://$PROJECT_DIR$/execel/parse_csv1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#24#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/execel/tianditu_coordinate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/execel/41_success/success_黄冈市.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-108">
+              <caret line="24" column="113" selection-start-line="24" selection-start-column="93" selection-end-line="24" selection-end-column="113" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/execel/parse_csv2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+              <folding>
+                <element signature="e#24#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/execel/get_coordinate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1150">
+              <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+              <folding>
+                <element signature="e#23#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,9 +119,16 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>f.</find>
-      <find>10000</find>
       <find>5</find>
+      <find>10000</find>
+      <find>su</find>
+      <find>success-</find>
+      <find>success-2</find>
       <find>success</find>
+      <find>c2b5e</find>
+      <find>6CCBB</find>
+      <find>D764C</find>
+      <find>open</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,18 +144,28 @@
         <option value="$PROJECT_DIR$/execel/failed_data.csv" />
         <option value="$PROJECT_DIR$/execel/path_to_dict.py" />
         <option value="$PROJECT_DIR$/execel/parse_es_data.py" />
-        <option value="$PROJECT_DIR$/execel/get_coordinate.py" />
         <option value="$PROJECT_DIR$/execel/read_execel.py" />
         <option value="$PROJECT_DIR$/execel/read_excel_2.py" />
-        <option value="$PROJECT_DIR$/execel/tianditu_coordinate.py" />
-        <option value="$PROJECT_DIR$/execel/test.py" />
         <option value="$PROJECT_DIR$/execel/signal" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/execel/get_city_multi.py" />
         <option value="$PROJECT_DIR$/execel/get_city_multi2.py" />
-        <option value="$PROJECT_DIR$/execel/signal.txt" />
+        <option value="$PROJECT_DIR$/execel/56_wrong.txt" />
+        <option value="$PROJECT_DIR$/execel/get_city_multi.py" />
+        <option value="$PROJECT_DIR$/execel/14_wrong.txt" />
         <option value="$PROJECT_DIR$/execel/get_city_multi3.py" />
+        <option value="$PROJECT_DIR$/execel/23_wrong.txt" />
         <option value="$PROJECT_DIR$/execel/get_city_id.py" />
+        <option value="$PROJECT_DIR$/execel/signal.txt" />
+        <option value="$PROJECT_DIR$/execel/fail_data/fail_data_临夏回族自治州.csv" />
+        <option value="$PROJECT_DIR$/execel/fail_data/fail_data_乌兰察布市.csv" />
+        <option value="$PROJECT_DIR$/execel/test.py" />
+        <option value="$PROJECT_DIR$/execel/fail_data_14/fail_data_东莞市.csv" />
+        <option value="$PROJECT_DIR$/parse_csv1.py" />
+        <option value="$PROJECT_DIR$/execel/parse_csv1.py" />
+        <option value="$PROJECT_DIR$/execel/parse_csv.py" />
+        <option value="$PROJECT_DIR$/execel/parse_csv2.py" />
+        <option value="$PROJECT_DIR$/execel/tianditu_coordinate.py" />
+        <option value="$PROJECT_DIR$/execel/get_coordinate.py" />
       </list>
     </option>
   </component>
@@ -124,7 +180,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,32 +196,26 @@
               <item name="python_execel" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_execel" type="462c0819:PsiDirectoryNode" />
               <item name="execel" type="462c0819:PsiDirectoryNode" />
-              <item name="success_data_14" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_execel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_execel" type="462c0819:PsiDirectoryNode" />
-              <item name="execel" type="462c0819:PsiDirectoryNode" />
-              <item name="success_data_23" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_execel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_execel" type="462c0819:PsiDirectoryNode" />
-              <item name="execel" type="462c0819:PsiDirectoryNode" />
-              <item name="success_data_56" type="462c0819:PsiDirectoryNode" />
+              <item name="41_success" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../python_project2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../parse_es_data/province_12" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\python_execel\execel" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -180,8 +229,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.get_city_id">
-    <configuration name="get_city_id" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.get_coordinate">
+    <configuration name="get_coordinate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_execel" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -194,7 +243,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/execel/get_city_id.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/execel/get_coordinate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -203,7 +252,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_city_multi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="parse_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_execel" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -216,7 +265,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/execel/get_city_multi.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/execel/parse_csv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -225,7 +274,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_city_multi2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="parse_csv1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_execel" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -238,7 +287,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/execel/get_city_multi2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/execel/parse_csv1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -247,7 +296,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_city_multi3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="parse_csv2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_execel" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -260,7 +309,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/execel/get_city_multi3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/execel/parse_csv2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -293,11 +342,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.get_city_id" />
-        <item itemvalue="Python.get_city_multi3" />
-        <item itemvalue="Python.get_city_multi" />
-        <item itemvalue="Python.get_city_multi2" />
+        <item itemvalue="Python.get_coordinate" />
         <item itemvalue="Python.tianditu_coordinate" />
+        <item itemvalue="Python.parse_csv2" />
+        <item itemvalue="Python.parse_csv1 (1)" />
+        <item itemvalue="Python.parse_csv" />
       </list>
     </recent_temporary>
   </component>
@@ -317,22 +366,25 @@
       <workItem from="1553130163603" duration="83000" />
       <workItem from="1553130296700" duration="26315000" />
       <workItem from="1553217053736" duration="29821000" />
-      <workItem from="1553475912491" duration="88104000" />
+      <workItem from="1553475912491" duration="134288000" />
+      <workItem from="1553848175992" duration="3491000" />
+      <workItem from="1554080870562" duration="29159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187250000" />
+    <option name="totallyTimeSpent" value="266084000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.171459" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49859944" visible="true" weight="0.17465389" />
+      <window_info id="Structure" order="1" sideWeight="0.5014006" side_tool="true" weight="0.17465389" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27489176" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4047619" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30194804" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -347,7 +399,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32960597" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,221 +411,258 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_阿勒泰地区.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_鸡西市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_来宾市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_14/success_data_三沙市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_14/success_data_内蒙古自治区.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/get_city_multi2.py">
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_鸡西市.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="141" column="50" lean-forward="true" selection-start-line="141" selection-start-column="50" selection-end-line="141" selection-end-column="50" />
+        <state relative-caret-position="-3078" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_陇南市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_鸡西市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_fail/fail_鸡西市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_fail/fail_通辽市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_凉山彝族自治州.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_兴安盟.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_吉安市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_fail/fail_临夏回族自治州.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_临夏回族自治州.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_fail/fail_七台河市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_临夏回族自治州.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="89" selection-start-line="2" selection-start-column="89" selection-end-line="2" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_七台河市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="280" selection-start-line="6" selection-start-column="280" selection-end-line="6" selection-end-column="280" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding>
-            <element signature="e#23#58#0" expanded="true" />
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_乌兰察布市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_乌兰察布市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_七台河市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_保定市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9450" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_伊春市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1500" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data/fail_data_伊春市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1532" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_fail/fail_伊春市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_fail/fail_保定市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_保定市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9258" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data_14/fail_data_三亚市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-992" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_三亚市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-978" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_东莞市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_梅州市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data_14/fail_data_梅州市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data_14/fail_data_东莞市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="332" selection-start-line="332" selection-end-line="332" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_fail/fail_湖州市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data_23/fail_data_湖州市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="1044" column="56" selection-start-line="1044" selection-start-column="51" selection-end-line="1044" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data_23/fail_data_漳州市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4718" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_湖州市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14424" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_三明市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_fail/fail_玉林市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_fail/fail_牡丹江市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_fail/fail_漳州市.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_牡丹江市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9276" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data_23/fail_data_牡丹江市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="562" column="234" lean-forward="true" selection-start-line="562" selection-start-column="234" selection-end-line="562" selection-end-column="254" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data_56/fail_data_红河哈尼族彝族自治州.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="1429" column="202" selection-start-line="1429" selection-start-column="202" selection-end-line="1429" selection-end-column="202" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_红河哈尼族彝族自治州.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20976" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data_56/fail_data_阿勒泰地区.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/fail_data_56/fail_data_黔东南苗族侗族自治州.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_黔东南苗族侗族自治州.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/success_data/success_data_松原市.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27416" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execel/parse_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/execel/tianditu_coordinate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+        <state relative-caret-position="484">
+          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_14/success_data_阿拉善盟.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_吉林市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_大兴安岭地区.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_大连市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_新余市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_日照市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_景德镇市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_朝阳市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_本溪市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_漳州市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_烟台市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_白城市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_白山市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_绥化市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_苏州市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_菏泽市.csv">
+    <entry file="file://$PROJECT_DIR$/execel/41_success/success_黄冈市.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39788" />
+        <state relative-caret-position="-108">
+          <caret line="24" column="113" selection-start-line="24" selection-start-column="93" selection-end-line="24" selection-end-column="113" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_营口市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_葫芦岛市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_镇江市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_鹤岗市.csv">
+    <entry file="file://$PROJECT_DIR$/execel/parse_csv2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15164" />
+        <state relative-caret-position="286">
+          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_黄山市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/city_without_data_14.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/city_without_data_23.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_56/success_data_安顺市.csv">
+    <entry file="file://$PROJECT_DIR$/execel/get_coordinate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38118" />
+        <state relative-caret-position="1150">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding>
+            <element signature="e#23#56#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/execel/city_without_data.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_56/success_data_乐山市.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24312" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_14/success_data_佛山市.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-174648" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_丽水市_3311.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51960" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/signal.txt">
+    <entry file="file://$PROJECT_DIR$/execel/parse_csv1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_14/success_data_北海市.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58692" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_56/success_data_红河哈尼族彝族自治州.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60321" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/fail_data_14/fail_data_三沙市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/fail_data_14/fail_data_临汾市.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13202" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/fail_data_14/fail_data_韶关市.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2951" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_14/success_data_韶关市.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76404" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_黑河市.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_黑河市_2311.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_哈尔滨市_2301.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39486" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_23/success_data_安庆市_3408.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12180" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_14/success_data_郴州市.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15168" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/success_data_56/success_data_丽江市.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9998" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/get_city_multi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1396">
-          <caret line="144" column="14" selection-start-line="144" selection-start-column="14" selection-end-line="144" selection-end-column="14" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#23#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/get_city_multi3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
-          <folding>
-            <element signature="e#23#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execel/get_city_id.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
-          <folding>
-            <element signature="e#24#72#0" expanded="true" />
+            <element signature="e#24#34#0" expanded="true" />
           </folding>
         </state>
       </provider>

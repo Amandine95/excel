@@ -74,5 +74,6 @@ def tiandituAddress(lat, lon):
 
 
 if __name__ == '__main__':
-    print tiandituPoint(u'')
-    # print tiandituAddress(39.914460, 116.367800)
+    # print tiandituPoint(u'')
+    city,district = tiandituAddress(30.447330,114.871352)
+    print city,district

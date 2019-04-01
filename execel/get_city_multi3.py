@@ -6,6 +6,8 @@ import csv
 from get_coordinate import getGeoPoints, getAddressInfo
 from tianditu_coordinate import tiandituPoint
 from multiprocessing import Process
+from test import cut_log
+import time
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -47,21 +49,17 @@ def get_city2():
     return dict
 
 
-def parse_es_data(i):
+def parse_es_data(success_citys, i):
     """按城市匹配修正es的数据"""
+    bd_lat, bd_lon = float(0), float(0)
+    tdt_lat, tdt_lon = float(0), float(0)
+    district = None
     city_dict = get_city2()
     print 'cities-', len(city_dict.keys())
-
-    success_citys = [u'4107', u'4416', u'4109', u'1306', u'1101', u'1309', u'4112', u'1509', u'1503', u'4115', u'1522',
-                     u'1411', u'1507', u'1501', u'1302', u'1402', u'1508', u'1310', u'1307', u'1409', u'1308', u'1407',
-                     u'1405', u'1406', u'4513', u'4302', u'4416', u'4403', u'4418', u'4331', u'1301', u'4412', u'4409',
-                     u'4210', u'4208', u'1311', u'4304', u'1504', u'1408', u'1505', u'1305', u'1304', u'1506', u'1525',
-                     u'1404', u'1403', u'4402', u'4451', u'4505', u'4202', u'4111', u'4406', u'1410', u'1502', u'1401',
-                     u'4207', u'1303', u'4509', u'1529']
     for key in city_dict.keys():
         prefix = key[0:4]
         if prefix not in success_citys and prefix[0] == i:
-            f1 = open(u'success_data_14/success_data_%s.csv' % city_dict[key], 'w+')
+            f1 = open(u'success_data_14/success_data_%s_%s.csv' % (city_dict[key], prefix), 'w+')
             headers1 = ['electr_supervise_no', 'id', 'province', 'city', 'district', 'location', 'bd_lat', 'bd_lon',
                         'tdt_lat', 'tdt_lon', 'flag']
             writer = csv.DictWriter(f1, fieldnames=headers1)
@@ -125,8 +123,18 @@ def parse_es_data(i):
 
 if __name__ == '__main__':
     # f = open(u'city_without_data_14.csv', 'a+')
-    p1 = Process(target=parse_es_data, args=('1',))
-    p2 = Process(target=parse_es_data, args=('4',))
+    cities = [u'4107', u'4416', u'4109', u'1306', u'1101', u'1309', u'4112', u'1509', u'1503', u'4115', u'1522',
+              u'1411', u'1507', u'1501', u'1302', u'1402', u'1508', u'1310', u'1307', u'1409', u'1308', u'1407',
+              u'1405', u'1406', u'4513', u'4302', u'4416', u'4403', u'4418', u'4331', u'1301', u'4412', u'4409',
+              u'4210', u'4208', u'1311', u'4304', u'1504', u'1408', u'1505', u'1305', u'1304', u'1506', u'1525',
+              u'1404', u'1403', u'4402', u'4451', u'4505', u'4202', u'4111', u'4406', u'1410', u'1502', u'1401',
+              u'4207', u'1303', u'4509', u'1529']
+    file_name = u'14_wrong.txt'
+    cities += cut_log(file_name)
+    print len(cities)
+    time.sleep(2)
+    p1 = Process(target=parse_es_data, args=(cities, '1',))
+    p2 = Process(target=parse_es_data, args=(cities, '4',))
     p1.start()
     p2.start()
     # f.close()
