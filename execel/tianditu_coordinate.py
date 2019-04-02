@@ -43,6 +43,8 @@ def tiandituPoint(address):
 # 请求：http://api.tianditu.gov.cn/geocoder?postStr={'lon':116.37304,'lat':39.92594,'ver':1}&type=geocode&tk=您的密钥
 def tiandituAddress(lat, lon):
     """天地图获取地址"""
+    city = None
+    district = None
     tries = 5
     while tries > 0:
         try:
@@ -57,9 +59,10 @@ def tiandituAddress(lat, lon):
             resp = urlopen(uri)
             resp_data = json.loads(resp.read())
             if resp_data['status'] == '0':
-                address = resp_data['result']['addressComponent']['city']
-                city = address
-                district = address
+                city = resp_data['result']['addressComponent']['city']
+                district = resp_data['result']['addressComponent']['address']
+                address = resp_data['result']['formatted_address']
+                print address
                 return city, district
             else:
                 tries -= 1
@@ -68,12 +71,11 @@ def tiandituAddress(lat, lon):
             print 'tianditu-2', e
             tries -= 1
             continue
-    city = None
-    district = None
+
     return city, district
 
 
 if __name__ == '__main__':
-    # print tiandituPoint(u'')
-    city,district = tiandituAddress(30.447330,114.871352)
-    print city,district
+    # print tiandituPoint(u'临汾市县城车站路')
+    c, d = tiandituAddress(36.065732,111.511400)
+    print c, d

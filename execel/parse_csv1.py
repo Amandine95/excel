@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
+# 通过天地图坐标拿取district
 
 import sys
 from get_coordinate import getAddressInfo
 import re
 import csv
 import os
-
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -14,7 +14,7 @@ sys.setdefaultencoding('utf-8')
 def parse_data(file_name, path1, path2):
     """处理csv数据"""
     fr = open(file_name, 'rU')
-    file_city = re.search(ur'/fail_data_(.*)\.csv', file_name).group(1)
+    file_city = re.search(ur'/fail_(.*)\.csv', file_name).group(1)
     success = path1 + u'success_' + file_city + u'.csv'
     fail = path2 + u'fail_' + file_city + u'.csv'
     f1 = open(success, 'w+')
@@ -37,13 +37,19 @@ def parse_data(file_name, path1, path2):
             id = data[1]
             province = data[2]
             right_city = data[4]
-            location = data[6]
+            location = data[5]
             bd_lat, bd_lon = float(data[7]), float(data[8])
             tdt_lat, tdt_lon = float(data[9]), float(data[10])
-            source_url = data[5]
-            if ele_no and len(ele_no) >= 4 and bd_lat and bd_lon:
-                district = getAddressInfo(bd_lat, bd_lon)[1]
-                flag = 1
+            source_url = data[6]
+            if ele_no and len(ele_no) >= 4:
+                if bd_lat and bd_lon:
+                    district = getAddressInfo(bd_lat, bd_lon)[1]
+                    flag = 1
+                elif tdt_lat and tdt_lon:
+                    district = getAddressInfo(tdt_lat, tdt_lon)[1]
+                    flag = 1
+                else:
+                    flag = 0
             else:
                 flag = 0
             if flag == 1:
@@ -68,12 +74,12 @@ def get_files(file_path):
 
 
 if __name__ == '__main__':
-    file_pt = u'fail_data'
+    file_pt = u'41_fail'
     file_ls = get_files(file_pt)
-    path_1 = u'41_success/'
-    path_2 = u'41_fail/'
-    point = file_ls.index(u'fail_data_嘉兴市.csv')
-    for fl in file_ls[point:]:
+    path_1 = u'42_success/'
+    path_2 = u'42_fail/'
+    # point = file_ls.index(u'fail_data_嘉兴市.csv')
+    for fl in file_ls:
         fl_name = file_pt + u'/' + fl
         print u'open-', fl_name
         parse_data(fl_name, path_1, path_2)
